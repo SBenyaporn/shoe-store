@@ -3,7 +3,7 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App.jsx";
-import { AuthProvider } from "./auth.jsx"; // ถ้าใช้คอนเท็กซ์ล็อกอิน
+import { AuthProvider } from "./Auth.jsx"; // ถ้าใช้คอนเท็กซ์ล็อกอิน
 import "./index.css";
 
 createRoot(document.getElementById("root")).render(

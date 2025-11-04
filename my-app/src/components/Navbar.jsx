@@ -1,7 +1,7 @@
 // src/components/Navbar.jsx
 import { NavLink, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { useAuth } from "../auth.jsx";
+import { useAuth } from "../Auth.jsx";
 
 export default function Navbar() {
   const { authed, signOut } = useAuth();

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../../auth.jsx"; 
+import { useAuth } from "../../Auth.jsx"; 
 
 export default function RegisterPage() {
   const [form, setForm] = useState({
