@@ -1,0 +1,24 @@
+.success-container {
+  text-align: center;
+  margin-top: 80px;
+  padding: 20px;
+}
+
+.success-container h2 {
+  color: green;
+  margin-bottom: 10px;
+}
+
+.back-home {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 16px;
+  background: darkred;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.back-home:hover {
+  background: #a00000;
+}

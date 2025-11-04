@@ -1,0 +1,236 @@
+:root{
+  --admin-primary: #004aad;
+  --admin-primary-600: #003e8f;
+  --admin-surface: #ffffff;
+  --admin-muted: #e6eef7;
+  --admin-text: #0f172a;
+  --admin-text-invert: #ffffff;
+  --admin-shadow: 0 10px 28px rgba(2, 6, 23, .10);
+}
+
+
+.admin-shell{
+  display:grid;
+  grid-template-columns:280px 1fr; 
+  min-height:100vh;
+  background:#f6f8fc;
+}
+
+
+.admin-sidebar{
+  background:var(--admin-primary);
+  color:var(--admin-text-invert);
+  padding:24px 18px;
+  box-shadow:inset -1px 0 0 rgba(255,255,255,.06);
+}
+
+.brand{
+  display:flex; align-items:center; gap:12px;
+  margin:4px 6px 24px;
+}
+.brand-logo{ width:44px; height:auto; }
+.brand-text{ font-weight:800; letter-spacing:.6px; color:#fff; }
+
+
+.menu{ display:flex; flex-direction:column; gap:6px; }
+.menu-item{
+  display:grid;
+  grid-template-columns:28px 1fr;
+  align-items:center;
+  gap:12px;
+  color:#eaf2ff;
+  text-decoration:none;
+  padding:12px 14px;
+  border-radius:12px;
+  position:relative;
+  transition:background .15s ease, color .15s ease, transform .05s ease;
+}
+.menu-item .mi-icon{ display:grid; place-items:center; color:#ffffff; opacity:.95; }
+.menu-item .mi-icon svg{ width:22px; height:22px; stroke:currentColor; fill:none; }
+.menu-item .mi-text{ font-size:18px; font-weight:700; }
+
+.menu-item:hover{ background:rgba(255,255,255,.10); color:#fff; }
+
+
+.menu-item.active{
+  background:rgba(255,255,255,.18);
+  color:#fff;
+}
+.menu-item.active::before{
+  content:"";
+  position:absolute; left:6px; top:10px; bottom:10px;
+  width:4px; border-radius:6px;
+  background:#ffffff;
+}
+
+
+
+.admin-main{ background:#f6f8fc; }
+
+
+.admin-topbar{
+  background:var(--admin-surface);
+  height:72px;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:0 24px 0 24px;
+  box-shadow:0 1px 4px rgba(2,6,23,.06);
+}
+
+.btn-export:hover{ background:#f9fbff; }
+
+.menu .menu-item {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  align-items: center;
+  gap: 12px;
+  color: #eaf2ff;
+  text-decoration: none;
+  padding: 12px 14px;
+  border-radius: 12px;
+  position: relative;
+  transition: background .15s ease, color .15s ease, transform .05s ease;
+
+ 
+  background: transparent;
+  border: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+
+.menu-item .mi-icon{ display:grid; place-items:center; color:#ffffff; opacity:.95; }
+.menu-item .mi-icon svg{ width:18px; height:18px; stroke:currentColor; fill:none; } /* เดิม 22x22 */
+.menu-item .mi-text{ font-size:18px; font-weight:700; }
+
+
+.menu-item:hover{ background:rgba(255,255,255,.10); color:#fff; }
+.menu-item.active{ background:rgba(255,255,255,.18); color:#fff; }
+.menu-item.active::before{
+  content:"";
+  position:absolute;
+  left:0;            
+  top:8px;           
+  bottom:8px;       
+  width:2px;         
+  border-radius:6px;
+  background:#ffffff;
+}
+
+
+.logout-btn.menu-item .mi-icon svg{ width:16px; height:16px; }
+
+
+
+.logout-btn { cursor: pointer; }
+.logout-btn .mi-icon svg { stroke: #fff; }
+
+
+.admin-content{ padding:24px; }
+
+
+.card{
+  background:var(--admin-surface);
+  border-radius:16px;
+  box-shadow:var(--admin-shadow);
+  padding:16px;
+}
+
+
+a.menu-item.active{ background:rgba(255,255,255,.18); color:#fff; }
+
+
+.brand{
+  display: flex;
+  align-items: center;      
+  justify-content: center;  
+  height: 140px;            
+  margin: 0 0 20px;         
+}
+
+.brand-logo{
+  width: 140px;             
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 2px 2px rgba(0,0,0,.08)); /* เล็กน้อยให้เด้ง */
+}
+
+
+.brand-logo{ width:120px; height:auto; display:block; }
+
+
+.admin-topbar{
+  background: var(--admin-surface);
+  height: 64px;
+  display: flex;
+ justify-content: space-between;
+ justify-content: flex-end;    
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 1px 4px rgba(2, 6, 23, 0.06);
+}
+
+
+
+.logout-btn.menu-item{
+  grid-template-columns: 16px 1fr; 
+  gap: px;                        
+  padding: 10px 70px 54px 25px;     
+  margin-left: -2px;               
+}
+
+
+.logout-btn .mi-icon svg{
+  width: 16px;
+  height: 16px;
+}
+
+
+.logout-btn.menu-item::before{
+  display: none;
+}
+/* ปุ่มการตั้งค่าแบบเด่น (น้ำเงิน ขาว) */
+.menu-item.settings{
+  background: #0B64B3;   /* น้ำเงินตามภาพ */
+  color: #fff;
+  border-radius: 10px;
+  font-weight: 600;
+}
+.menu-item.settings .mi-icon svg{
+  stroke: currentColor;
+}
+.menu-item.settings:hover{
+  filter: brightness(0.95);
+}
+.menu-item.settings.active{
+  box-shadow: inset 0 0 0 2px rgba(255,255,255,.6);
+}
+
+/* เผื่อธีมเดิมใช้สีตัวอักษรของ .menu-item ให้บังคับไอคอนเป็นขาว */
+.menu .menu-item.settings .mi-text{ color:#fff; }
+.menu .menu-item.settings .mi-icon{ color:#fff; }
+
+.settings-shell{ display:flex; min-height:100vh; }
+
+.settings-aside{
+  width:240px;
+  background:#0B64B3;
+  color:#fff;
+  padding:16px 10px;
+}
+
+.s-menu{ display:flex; flex-direction:column; gap:6px; }
+
+.s-item{
+  display:flex; align-items:center; gap:10px;
+  padding:10px 12px; border-radius:10px;
+  color:#cfe6fb; text-decoration:none;
+}
+.s-item .s-ic svg{ width:20px; height:20px; stroke: currentColor; }
+.s-item .s-txt{ color:#fff; font-weight:600; }
+
+.s-item:hover{ background: rgba(255,255,255,.08); }
+.s-item.active{ background:#fff; color:#093d6b; }
+.s-item.active .s-txt, .s-item.active .s-ic{ color:#093d6b; }
+
+.settings-main{ flex:1; background:#f6f7f9; padding:20px; }

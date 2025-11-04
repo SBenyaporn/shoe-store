@@ -1,0 +1,44 @@
+.ship { padding: 8px 6px; }
+
+.ship-head h2{ margin:0 0 12px; font-weight:800; color:#0f172a; }
+
+.ship-toolbar{
+  display:flex; gap:8px; flex-wrap:wrap;
+  background:#fff; border:1px solid #eef2f7; border-radius:12px;
+  padding:10px; margin-bottom:12px; box-shadow:0 4px 12px rgba(15,23,42,.05);
+}
+.ship-field{ position:relative; }
+.ship-field .ico{ position:absolute; left:10px; top:50%; transform:translateY(-50%); opacity:.6; }
+.ship-input{
+  height:38px; border-radius:10px; border:1px solid #e5e7eb; padding:0 12px 0 30px;
+  background:#fff; color:#0f172a; min-width:260px;
+}
+.ship-input:focus{ outline:none; border-color:#004aad; box-shadow:0 0 0 3px rgba(0,74,173,.15); }
+
+.ship-btn{
+  height:38px; border-radius:10px; padding:0 14px; border:1px solid #e6edf6;
+  background:#fff; font-weight:700; cursor:pointer;
+}
+.ship-btn.primary{ background:#004aad; color:#fff; border-color:#004aad; }
+.ship-btn.primary:hover{ filter:brightness(1.03); }
+
+.ship-card{
+  background:#fff; border:1px solid #eef2f7; border-radius:16px;
+  box-shadow:0 10px 20px rgba(15,23,42,.06); overflow:auto;
+}
+.ship-table{ width:100%; border-collapse:separate; border-spacing:0; }
+.ship-table thead th{
+  text-align:left; font-size:13px; color:#64748b; font-weight:700;
+  padding:12px; background:#f8fafc; position:sticky; top:0; z-index:1;
+}
+.ship-table tbody td{ padding:10px 12px; border-top:1px solid #f1f5f9; }
+.sku{ background:#eef2ff; padding:2px 6px; border-radius:6px; }
+.mono{ font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+/* badges */
+.badge{ display:inline-block; padding:4px 8px; border-radius:999px; font-weight:700; font-size:12px; }
+.badge.good{ background:#e8fff1; color:#0f7b4b; border:1px solid #bff0d4; }
+.badge.warn{ background:#fff6e6; color:#b45309; border:1px solid #fde2b2; }
+.badge.info{ background:#eef6ff; color:#1e4bb8; border:1px solid #cfe0ff; }
+
+.empty{ text-align:center; color:#64748b; padding:28px 0; }

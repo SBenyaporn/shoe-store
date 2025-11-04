@@ -1,0 +1,73 @@
+.emp-wrap { max-width:100%; }
+.emp-head{ display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:12px; }
+.emp-title{ margin:0; font-size:20px; }
+
+/* ปุ่มเม็ดแคปซูลขาว */
+.pill-btn{
+  border:0;
+  background:#fff;
+  padding:10px 16px;
+  border-radius:999px;
+  font-weight:700;
+  cursor:pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,.08), 0 1px 0 rgba(255,255,255,.7) inset;
+}
+.pill-btn:hover{ filter: brightness(.98); }
+
+.emp-card{
+  background:#fff; border:1px solid #e5e7eb; border-radius:10px; overflow:hidden;
+}
+
+/* ตาราง */
+.emp-table{ width:100%; border-collapse:separate; border-spacing:0; }
+.emp-table thead th{
+  background:#e9ecef; color:#111827; text-align:left; font-weight:600;
+  padding:14px 16px; border-bottom:1px solid #e5e7eb;
+}
+.emp-table tbody td{
+  padding:14px 16px; border-bottom:1px solid #f0f2f4; vertical-align:middle;
+}
+.emp-table tbody tr:last-child td{ border-bottom:none; }
+
+.w-name{ min-width:220px; }
+.w-status{ min-width:160px; }
+.muted{ color:#6b7280; }
+
+/* สถานะ (พิลล์) */
+.st{
+  display:inline-block; padding:4px 10px; border-radius:999px;
+  font-size:12px; font-weight:600; line-height:1.2;
+}
+.st.ok  { background:#e8f7ef; color:#0a6c3f; border:1px solid #bde5cf; }
+.st.vac { background:#fff7e6; color:#8a5200; border:1px solid #f7dfb3; }
+.st.off { background:#eef2ff; color:#2536b8; border:1px solid #d7dcff; }
+
+/* ===== Modal ===== */
+.emp-modal-backdrop{
+  position:fixed; inset:0; background:rgba(0,0,0,.35);
+  display:flex; align-items:center; justify-content:center; padding:16px; z-index:50;
+}
+.emp-modal{ width:100%; max-width:720px; background:#fff; border-radius:12px; overflow:hidden; }
+.modal-head{ padding:12px 16px; border-bottom:1px solid #e5e7eb; }
+.modal-body{ padding:16px; }
+.modal-foot{ display:flex; justify-content:flex-end; gap:8px; padding:12px 16px; border-top:1px solid #e5e7eb; }
+
+.grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.fcol{ display:flex; flex-direction:column; gap:6px; }
+.lbl{ font-size:12px; color:#6b7280; }
+
+.input{ border:1px solid #e5e7eb; border-radius:8px; padding:10px 12px; }
+.input:focus{ outline: none; border-color:#93c5fd; box-shadow:0 0 0 3px rgba(59,130,246,.2); }
+
+.btn{ border:0; border-radius:8px; padding:10px 14px; cursor:pointer; }
+.btn.ghost{ background:#f3f4f6; }
+.btn.ghost:hover{ background:#e5e7eb; }
+.btn.primary{ background:#0B64B3; color:#fff; }
+.btn.primary:hover{ filter:brightness(.95); }
+
+.alert.warn{
+  background:#FFF5F5; border:1px solid #FCA5A5; color:#991B1B;
+  padding:8px 10px; border-radius:8px; margin-bottom:12px;
+}
+
+@media (max-width:640px){ .grid2{ grid-template-columns:1fr; } }

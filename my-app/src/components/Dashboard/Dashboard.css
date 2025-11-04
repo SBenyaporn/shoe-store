@@ -1,0 +1,84 @@
+.dash { padding: 8px 6px; }
+.dash-top{
+  display:flex; align-items:center; justify-content:space-between;
+  margin-bottom: 12px;
+}
+.dash h2{ margin:0; font-size:28px; font-weight:800; color:#0f172a; }
+.dash p{ margin:4px 0 0; color:#6b7280; }
+
+.btn-export{
+  display:flex; align-items:center; gap:8px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background:#fff;
+  border:1px solid #eef2f7;
+  box-shadow: 0 2px 8px rgba(15,23,42,.06);
+  color:#0f172a;
+  cursor:pointer;
+}
+.btn-export:hover{ background:#f9fbff; }
+
+
+.stat-grid{
+  display:grid;
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  gap: 18px;
+  margin: 12px 0 18px;
+}
+@media (max-width:1100px){ .stat-grid{ grid-template-columns: repeat(2, 1fr); } }
+@media (max-width:640px){ .stat-grid{ grid-template-columns: 1fr; } }
+
+.stat-card{
+  display:grid;
+  grid-template-columns: 56px 1fr;
+  gap: 16px;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #eef2f7;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(15,23,42,.06);
+}
+.stat-icon{
+  width:56px; height:56px;
+  border-radius: 14px;
+  display:grid; place-items:center;
+}
+.stat-main{ display:grid; align-content:center; gap:4px; }
+.stat-num{ font-size:26px; font-weight:800; color:#0f172a; line-height:1; }
+.stat-label{ color:#475569; font-weight:600; }
+.stat-delta{ font-size:12px; margin-top:4px; }
+
+/* Charts grid */
+.chart-grid{
+  display:grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 18px;
+}
+@media (max-width:1100px){ .chart-grid{ grid-template-columns: 1fr; } }
+
+.card{
+  background:#fff;
+  border:1px solid #eef2f7;
+  border-radius:16px;
+  box-shadow:0 10px 20px rgba(15,23,42,.06);
+  padding: 14px 16px;
+}
+.card-head h3{ margin:6px 0 6px; font-size:15px; font-weight:800; color:#0f172a; }
+.mini-sep{ height:6px; }
+
+/* Pie legend */
+.chart-wrap{ position:relative; }
+.legend{
+  list-style:none; padding:0; margin: 8px 0 0;
+  display:flex; flex-direction:column; gap:6px;
+}
+.legend li{ display:flex; align-items:center; gap:8px; color:#334155; font-size:14px; }
+.legend .dot{ width:10px; height:10px; border-radius:50%; display:inline-block; }
+.legend .legend-val{ margin-left:auto; color:#0f172a; font-weight:700; }
+
+/* Recharts resets a little for softer look */
+.recharts-default-tooltip{
+  border-radius:10px !important;
+  border-color:#eef2f7 !important;
+  box-shadow:0 10px 20px rgba(15,23,42,.08) !important;
+}

@@ -1,0 +1,75 @@
+/* โครง 3 คอลัมน์: Filters | Main | Cart */
+.shop-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr 360px;
+  gap: 24px;
+}
+
+/* Toolbar + Search */
+.shop-toolbar { display: flex; gap: 12px; align-items: center; margin-bottom: 16px; }
+.icon-btn { border: 1px solid #ddd; background: #fff; padding: 8px 10px; border-radius: 8px; cursor: pointer; }
+.search { flex: 1; display: flex; align-items: center; gap: 8px; border: 1px solid #e5e7eb; padding: 8px 12px; border-radius: 12px; background: #fff; }
+.search input { border: none; outline: none; width: 100%; background: transparent; }
+
+/* Filters panel (เดสก์ท็อปเป็นคอลัมน์ซ้าย) */
+.filters { border: 1px solid #e5e7eb; background: #fff; border-radius: 12px; padding: 16px; height: fit-content; }
+.filters-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.filters-section { display: grid; gap: 8px; margin-bottom: 16px; }
+.filters-title { margin: 8px 0; color: #666; }
+.row { display: flex; align-items: center; gap: 10px; }
+.filters-actions { display: flex; gap: 8px; }
+.btn-outline { background: #fff; border: 1px solid #d1d5db; border-radius: 8px; padding: 8px 10px; cursor: pointer; }
+
+/* Drawer เฉพาะมือถือ */
+@media (max-width: 1023.98px) {
+  .shop-grid { grid-template-columns: 1fr; }
+  .shop-cart { order: 3; }
+  .filters {
+    display: none; /* ซ่อนแผงคงที่ */
+  }
+  .filters.floating {
+    display: block;
+    position: fixed; top: 0; left: 0; height: 100%; width: 78%;
+    max-width: 320px; border-radius: 0; z-index: 70;
+    transform: translateX(-100%); transition: transform .25s ease;
+    overflow-y: auto;
+  }
+  .filters.floating.open { transform: translateX(0); }
+  .overlay { position: fixed; inset: 0; background: rgba(0,0,0,.35); z-index: 60; }
+}
+
+/* Desktop ปิด overlay + ปุ่มปิด */
+@media (min-width: 1024px) {
+  .overlay { display: none !important; }
+  .filters-head .icon-btn { display: none; }
+}
+
+/* Product grid/cards (เหมือนเดิม) */
+.products-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.p-card { border: 1px solid #eee; border-radius: 12px; background: #fff; overflow: hidden; transition: box-shadow 0.2s; }
+.p-card:hover { box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+.p-thumb-link { display: block; text-decoration: none; }
+.p-thumb { position: relative; aspect-ratio: 4/3; background: #fafafa; cursor: pointer; transition: opacity 0.2s; }
+.p-thumb:hover { opacity: 0.9; }
+.p-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.badge-soldout { position: absolute; left: 8px; top: 8px; padding: 4px 8px; font-size: 12px; background: #111827; color: #fff; border-radius: 8px; }
+.p-body { padding: 12px; }
+.p-name-link { text-decoration: none; color: inherit; display: block; }
+.p-name-link:hover .p-name { color: #2563eb; }
+.p-name { font-size: 14px; margin: 0 0 6px; transition: color 0.2s; }
+.muted { color: #6b7280; font-weight: 400; }
+.p-price { font-weight: 700; margin-bottom: 10px; }
+.p-actions { display: flex; gap: 8px; }
+.btn { background: #111827; color: #fff; border: 1px solid #111827; border-radius: 8px; padding: 8px 10px; cursor: pointer; }
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+.btn-full { width: 100%; background: #374151; color: #fff; border: 1px solid #374151; border-radius: 8px; padding: 8px 10px; }
+
+/* Cart */
+.shop-cart .cart-card { border: 1px solid #e5e7eb; background: #fff; border-radius: 12px; padding: 16px; }
+.cart-list { display: grid; gap: 12px; margin: 12px 0; }
+.cart-row { display: grid; grid-template-columns: 64px 1fr; gap: 10px; }
+.cart-row img { width: 64px; height: 64px; object-fit: cover; border-radius: 8px; }
+.cart-sub { color: #6b7280; font-size: 14px; margin: 4px 0 8px; }
+.icon-btn { border: 1px solid #ddd; background: #fff; padding: 6px 8px; border-radius: 8px; cursor: pointer; }
+.link { background: transparent; border: none; color: #2563eb; cursor: pointer; }
+.link.danger { color: #ef4444; }

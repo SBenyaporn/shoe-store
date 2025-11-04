@@ -1,0 +1,135 @@
+:root{
+  --al-blue: #004aad;
+  --al-blue-press: #003e8f;
+  --al-text: #0b2a5a;
+  --al-border: #E6E9F0;
+  --al-bg: #ffffff;             
+  --al-shadow: 0 22px 60px rgba(15,23,42,.10);
+  --al-radius-card: 0px;
+  --al-radius-input: 12px;
+  --al-input-h: 52px;
+}
+
+
+.AL-bg{
+  min-height:100vh;
+  background:var(--al-bg);
+  display:grid;
+  place-items:center;
+  padding:32px 20px;
+}
+
+
+.AL-card{
+  width:min(840px, 86vw);       
+  background:#ffffff;         
+  border-radius:var(--al-radius-card);
+  box-shadow:var(--al-shadow);
+  display:grid;
+  grid-template-columns: 1fr 0.95fr;  
+  gap:0;                       
+  padding:0;                   
+  overflow:hidden;
+}
+
+
+.AL-left{
+  display:block;
+  border-radius:var(--al-radius-card) 0 0 var(--al-radius-card);
+  overflow:hidden;
+}
+.AL-left img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;             
+  border-radius:0;              
+  box-shadow:none;
+}
+
+.AL-right{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:28px;                
+}
+.AL-title{
+  margin:0 0 14px;
+  color:var(--al-text);
+  font-weight:900;
+  font-size:clamp(26px,2.6vw,32px);
+}
+
+/* ฟอร์ม */
+.AL-form{ display:grid; gap:14px; }
+
+.AL-field{ position:relative; display:block; }
+.AL-field input{
+  width:100%;
+  height:var(--al-input-h);
+  border:1px solid var(--al-border);
+  border-radius:var(--al-radius-input);
+  padding:0 46px;
+  background:#ffffff;           /* ❗พื้นหลังช่องขาว */
+  font-size:16px;
+  color:#111827;
+  transition:border-color .2s, box-shadow .2s;
+}
+.AL-field input::placeholder{ color:#9aa3af; }
+.AL-field input:focus{
+  outline:none;
+  border-color:var(--al-blue);
+  box-shadow:0 0 0 4px rgba(0,74,173,.14); /* #004aad */
+}
+
+/* ไอคอนซ้ายและปุ่มตา */
+.AL-icon{
+  position:absolute; left:14px; top:50%; transform:translateY(-50%);
+  color:#9aa3af; pointer-events:none;
+}
+.AL-icon svg, .AL-eye svg{ width:20px; height:20px; stroke:currentColor; fill:none; stroke-width:1.7; }
+.AL-eye{
+  position:absolute; right:12px; top:50%; transform:translateY(-50%);
+  border:0; background:transparent; color:#6b7280; cursor:pointer;
+}
+
+/* ลิงก์ลืมรหัส */
+.AL-row-end{ display:flex; justify-content:flex-end; margin-top:-6px; }
+.AL-link{ background:none; border:0; color:#7b8496; font-size:14px; cursor:pointer; padding:0; }
+.AL-link:hover{ text-decoration:underline; }
+
+/* ปุ่ม */
+.AL-btnPrimary{
+  height:var(--al-input-h);
+  border:0; border-radius:var(--al-radius-input);
+  background:#004aad;          /* ❗น้ำเงินหลัก */
+  color:#ffffff;               /* ❗ตัวอักษรขาว */
+  font-weight:800; font-size:16px;
+  box-shadow:0 10px 22px rgba(0,74,173,.28);
+  cursor:pointer;
+  transition:filter .2s, transform .05s, background .2s;
+}
+.AL-btnPrimary:hover{ filter:brightness(1.03); }
+.AL-btnPrimary:active{ transform:translateY(1px); background:#003e8f; }
+
+.AL-btnGhost{
+  display:flex; align-items:center; justify-content:center;
+  height:calc(var(--al-input-h) - 4px);
+  border-radius:var(--al-radius-input);
+  background:#ffffff;          /* ❗พื้นหลังขาว */
+  border:1px solid var(--al-border);
+  color:#0f172a;
+  font-weight:700;
+  text-decoration:none;
+}
+
+/* error */
+.AL-error{ color:#ef4444; font-size:14px; margin-top:2px; }
+
+/* Responsive */
+@media (max-width:980px){
+  .AL-card{ grid-template-columns:1fr; }
+  .AL-left{ border-radius:var(--al-radius-card) var(--al-radius-card) 0 0; }
+  .AL-left img{ height:clamp(220px, 38vh, 380px); }
+  .AL-right{ padding:22px; }
+}

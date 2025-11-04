@@ -1,0 +1,121 @@
+.payment-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.payment-container h2 {
+  margin-bottom: 20px;
+  color: #b30000;
+}
+
+.order-box {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.order-line,
+.order-total {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+
+.order-total {
+  font-weight: bold;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+.methods {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.method {
+  flex: 1;
+  padding: 16px;
+  text-align: center;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #f9f9f9;
+}
+
+.method.active {
+  border: 2px solid #b30000;
+  background: #ffecec;
+}
+
+.card-form,
+.promptpay-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card-form label,
+.promptpay-form label {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.card-form input,
+.promptpay-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+}
+
+.promptpay-info {
+  border: 1px solid #ddd;
+  padding: 12px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.pay-button {
+  width: 100%;
+  padding: 12px;
+  background: #555;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.pay-button:hover {
+  background: #333;
+}
+.method {
+  flex: 1;
+  padding: 16px;
+  text-align: center;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* ระยะห่างโลโก้กับ text */
+}
+
+.method-logo {
+  height: 20px; /* ปรับขนาดโลโก้ */
+  object-fit: contain;
+}

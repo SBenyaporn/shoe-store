@@ -1,0 +1,64 @@
+/* เฉพาะหน้าการลา */
+.leave-wrap{
+  --bg:#f6f7fb; --card:#fff; --line:#e9edf3; --muted:#6b7280; --shadow:0 10px 30px rgba(15,23,42,.05);
+  --brand:#0B64B3;
+  padding:18px; background:var(--bg); min-height:100%;
+}
+
+.leave-top{ display:flex; justify-content:space-between; align-items:flex-end; gap:12px; margin-bottom:12px; }
+.leave-actions{ display:flex; gap:10px; }
+.muted{ color:var(--muted); }
+
+.pill-btn{
+  border:0; background:#fff; padding:10px 16px; border-radius:999px; font-weight:800;
+  box-shadow:0 6px 18px rgba(0,0,0,.08), 0 1px 0 rgba(255,255,255,.7) inset; cursor:pointer;
+}
+.pill-btn:hover{ filter:brightness(.98); }
+
+/* Toolbar */
+.leave-toolbar{ display:flex; gap:10px; flex-wrap:wrap; margin-bottom:12px; }
+.input{ background:#fff; border:1px solid var(--line); border-radius:10px; padding:10px 12px; box-shadow:0 6px 16px rgba(15,23,42,.06); }
+.input:focus{ outline:none; border-color:#c7d7ff; box-shadow:0 0 0 4px rgba(59,130,246,.15); }
+
+/* Card + Table */
+.leave-card{ background:var(--card); border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow); overflow:hidden; }
+.leave-table{ width:100%; border-collapse:separate; border-spacing:0; }
+.leave-table thead th{ background:#eef2f7; font-weight:700; color:#1f2937; padding:14px 16px; border-bottom:1px solid var(--line); text-align:left; }
+.leave-table tbody td{ padding:14px 16px; border-bottom:1px solid var(--line); vertical-align:middle; }
+.leave-table tbody tr:last-child td{ border-bottom:0; }
+.ta-right{ text-align:right; }
+.code{ background:#f2f5fb; border:1px solid var(--line); border-radius:8px; padding:3px 8px; font-weight:700; }
+
+/* badges */
+.badge{ display:inline-block; padding:6px 10px; border-radius:999px; font-size:12px; font-weight:700; border:1px solid transparent; }
+.badge.pending{  color:#7a5200; background:#ffe8a3; border-color:#ffd66b; }  /* เหลือง: รออนุมัติ */
+.badge.approved{ color:#065f46; background:#bbf7d0; border-color:#86efac; }  /* เขียว: อนุมัติ */
+.badge.rejected{ color:#7f1d1d; background:#fecaca; border-color:#fca5a5; }  /* แดง: ปฏิเสธ */
+
+.row-actions{ display:flex; gap:8px; justify-content:flex-end; }
+.btn{ border:0; border-radius:10px; padding:8px 12px; cursor:pointer; font-weight:600; }
+.btn.ghost{ background:#fff; border:1px solid var(--line); }
+.btn.primary{ background:var(--brand); color:#fff; }
+.x-approve{ background:#10b981; color:#fff; }
+.x-reject{ background:#ef4444; color:#fff; }
+.empty{ text-align:center; color:var(--muted); padding:16px; }
+
+/* Modal */
+.leave-modal-backdrop{
+  position:fixed; inset:0; background:rgba(0,0,0,.35);
+  display:flex; align-items:center; justify-content:center; padding:16px; z-index:50;
+}
+.leave-modal{ max-width:720px; width:100%; background:#fff; border-radius:12px; overflow:hidden; }
+.lm-head{ padding:12px 16px; border-bottom:1px solid var(--line); }
+.lm-body{ padding:16px; }
+.lm-foot{ display:flex; justify-content:flex-end; gap:8px; padding:12px 16px; border-top:1px solid var(--line); }
+
+.grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.fcol{ display:flex; flex-direction:column; gap:6px; }
+.lbl{ font-size:12px; color:var(--muted); }
+
+.alert.warn{ background:#FFF5F5; border:1px solid #FCA5A5; color:#991B1B; padding:8px 10px; border-radius:8px; margin-bottom:10px; }
+
+@media (max-width: 800px){
+  .grid2{ grid-template-columns:1fr; }
+}
