@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from "react";
-import "./Payments.css";
+import "./payments.css";
 
 const seed = [
   { id:"PAY-240301-001", orderId:"T1-AS02", customer:"กวิน ภูวเดช",        method:"โอนผ่านธนาคาร", amount:4800, date:"01-03-2568", status:"รอชำระเงิน" },

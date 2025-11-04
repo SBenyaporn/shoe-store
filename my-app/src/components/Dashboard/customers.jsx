@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from "react";
-import "./Customers.css";
+import "./customers.css";
 
 const seed = [
   { id:"CUST001", name:"วิชญา อินทรสุข",   email:"wichaya.in@gmail.com",   phone:"0811111001", address:"ลำปาง",   orders:1,  total:2900  },

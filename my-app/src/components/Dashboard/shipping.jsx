@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from "react";
-import "./Shipping.css";
+import "./shipping.css";
 
 const seed = [
   { orderId:"ORD-1001", customer:"คุณมานี",   address:"กรุงเทพฯ",   status:"จัดส่งแล้ว",       orderDate:"2024-02-10", courier:"Kerry Express", tracking:"KEX123456789" },

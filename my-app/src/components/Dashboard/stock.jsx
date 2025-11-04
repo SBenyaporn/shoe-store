@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from "react";
-import "./Stock.css";
+import "./stock.css";
 
 const seed = [
   { id: "SKU-001", name: "Adidas Samba OG White/Black", brand: "Adidas", category: "Sneaker", price: 3800, stock: 28, min: 10 },
