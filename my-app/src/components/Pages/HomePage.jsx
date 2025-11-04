@@ -1,8 +1,8 @@
 // src/components/Pages/HomePage.jsx
 import React from "react";
-import hero1 from "../../assets/home/1.1.webp";
-import hero2 from "../../assets/home/1.2.webp";
-import hero3 from "../../assets/home/1.3.webp";
+import hero1 from "../../assets/Home/1.1.webp";
+import hero2 from "../../assets/Home/1.2.webp";
+import hero3 from "../../assets/Home/1.3.webp";
 import c1 from "../../assets/1.2.webp";
 import c2 from "../../assets/2.webp";
 import c3 from "../../assets/3.webp";
