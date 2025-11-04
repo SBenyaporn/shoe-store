@@ -1,0 +1,14 @@
+[tool.robotframework]
+outputDir = "results"
+log = "results/log.html"
+report = "results/report.html"
+xunit = "results/xunit.xml"
+pythonpath = ["."]
+variable = ["BROWSER:chrome", "BASE_URL:http://localhost:5173"]
+
+[tool.robotframework.lint]
+enabled = true
+maxErrorLength = 200
+
+
+
